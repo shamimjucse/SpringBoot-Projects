@@ -21,7 +21,7 @@ public class StudentServiceImple implements StudentService {
     }
 
     @Override
-    public Student getStudentByRoll(int roll) {
+    public Student getStudentByRoll(Integer roll) {
         return studentRepo.findById( roll ).get();
     }
 
@@ -31,7 +31,7 @@ public class StudentServiceImple implements StudentService {
     }
 
     @Override
-    public void delete(int roll) {
+    public void delete(Integer roll) {
         studentRepo.deleteById(roll);
     }
 }

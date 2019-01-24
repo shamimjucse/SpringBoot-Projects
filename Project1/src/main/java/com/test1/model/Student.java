@@ -10,28 +10,28 @@ import javax.persistence.Table;
 public class Student {
 
     @Id
-    private int roll;
+    private Integer roll;
 
     @Column(name = "name")
     private String name;
 
     @Column(name = "mark")
-    private int mark;
+    private Integer mark;
 
     public Student() {
     }
 
-    public Student(int roll, String name, int mark) {
+    public Student(Integer roll, String name, Integer mark) {
         this.roll = roll;
         this.name = name;
         this.mark = mark;
     }
 
-    public int getRoll() {
+    public Integer getRoll() {
         return roll;
     }
 
-    public void setRoll(int roll) {
+    public void setRoll(Integer roll) {
         this.roll = roll;
     }
 
@@ -43,11 +43,11 @@ public class Student {
         this.name = name;
     }
 
-    public int getMark() {
+    public Integer getMark() {
         return mark;
     }
 
-    public void setMark(int mark) {
+    public void setMark(Integer mark) {
         this.mark = mark;
     }
 }

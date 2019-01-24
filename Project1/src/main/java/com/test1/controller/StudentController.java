@@ -37,7 +37,7 @@ public class StudentController {
 
 
     @RequestMapping(value = "/update/{roll}", method = RequestMethod.GET)
-    public ModelAndView updateStudentInfo( @PathVariable("roll") int roll ) {
+    public ModelAndView updateStudentInfo( @PathVariable("roll") Integer roll ) {
         ModelAndView modelAndView = new ModelAndView("student_form");
         Student student = studentService.getStudentByRoll(roll);
         modelAndView.addObject("student", student);
@@ -52,7 +52,7 @@ public class StudentController {
 
 
     @RequestMapping( value = "/delete/{roll}", method = RequestMethod.GET )
-    public ModelAndView deleteStudent( @PathVariable("roll") int roll ) {
+    public ModelAndView deleteStudent( @PathVariable("roll") Integer roll ) {
         studentService.delete(roll);
         return new ModelAndView( "redirect:/all" );
     }
