@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit From</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container well col-sm-4 col-md-offset-4">
+    <form action="/action_page.php" th:action="@{/save}" method="post" th:object="${student}">
+        <div class="form-group">
+            <label> Your Roll</label>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon transparent"><span class="glyphicon glyphicon-registration-mark"></span></span>
+                <input class="form-control left-border-none" placeholder="Enter your Roll" type="number" name="roll" id="roll" th:field="*{roll}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label> Your Name</label>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon transparent"><span class="glyphicon glyphicon-user"></span></span>
+                <input class="form-control left-border-none" placeholder="Enter your Name" type="text" name="name" id="name" th:field="*{name}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label> Your Marks</label>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon transparent"><span class="glyphicon glyphicon-question-sign"></span></span>
+                <input class="form-control left-border-none" placeholder="Enter your Marks" type="number" name="mark" id="mark" th:field="*{mark}">
+            </div>
+        </div>
+        <button class="form-control btn btn-success" type="submit">SUBMIT</button>
+        <!--<button class="form-control btn btn-primary" type="submit">CLEAR</button>-->
+    </form>
+</div>
+</body>
+</html>
+
+
+
